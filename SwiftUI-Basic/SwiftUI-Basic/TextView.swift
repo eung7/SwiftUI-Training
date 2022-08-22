@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct TextView: View {
-    var body: some View {
-        Text("SwiftUI")
+  var body: some View {
+    HStack {
+      Text("SwiftUI")
         .font(.system(size: 40, weight: .bold, design: .default))
     }
+  }
 }
 
 struct TextView_Previews: PreviewProvider {
-    static var previews: some View {
-        TextView()
-    }
+  static var previews: some View {
+    TextView()
+  }
 }
