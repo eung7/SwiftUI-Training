@@ -8,22 +8,20 @@
 import SwiftUI
 
 struct SecondView: View {
-    var body: some View {
-      NavigationView {
-        VStack(spacing: 30) {
-          NavigationLink {
-            ThirdView()
-          } label: {
-            Text("Third View")
-          }
-        }
-        .navigationTitle("Second View")
+  var body: some View {
+    VStack(spacing: 30) {
+      NavigationLink {
+        ThirdView()
+      } label: {
+        Text("Third View")
       }
     }
+    .navigationTitle("Second View")
+  }
 }
 
 struct SecondView_Previews: PreviewProvider {
-    static var previews: some View {
-        SecondView()
-    }
+  static var previews: some View {
+    SecondView()
+  }
 }
