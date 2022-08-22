@@ -7,15 +7,18 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SymbolRollerView: View {
+  let symbols: [String] = ["sun.min", "moon", "cloud", "wind", "snowflake"]
+  
     var body: some View {
         Text("Hello, world!")
             .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SymbolRoller_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SymbolRollerView()
     }
 }
+

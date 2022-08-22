@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E55A601B28B325FF0099242C /* SwiftUI_SymbolRollerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A601A28B325FF0099242C /* SwiftUI_SymbolRollerApp.swift */; };
-		E55A601D28B325FF0099242C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A601C28B325FF0099242C /* ContentView.swift */; };
+		E55A601D28B325FF0099242C /* SymbolRollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A601C28B325FF0099242C /* SymbolRollerView.swift */; };
 		E55A601F28B326010099242C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E55A601E28B326010099242C /* Assets.xcassets */; };
 		E55A602228B326010099242C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E55A602128B326010099242C /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		E55A601728B325FF0099242C /* SwiftUI-SymbolRoller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-SymbolRoller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E55A601A28B325FF0099242C /* SwiftUI_SymbolRollerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_SymbolRollerApp.swift; sourceTree = "<group>"; };
-		E55A601C28B325FF0099242C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E55A601C28B325FF0099242C /* SymbolRollerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolRollerView.swift; sourceTree = "<group>"; };
 		E55A601E28B326010099242C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E55A602128B326010099242C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				E55A601A28B325FF0099242C /* SwiftUI_SymbolRollerApp.swift */,
-				E55A601C28B325FF0099242C /* ContentView.swift */,
+				E55A601C28B325FF0099242C /* SymbolRollerView.swift */,
 				E55A601E28B326010099242C /* Assets.xcassets */,
 				E55A602028B326010099242C /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E55A601D28B325FF0099242C /* ContentView.swift in Sources */,
+				E55A601D28B325FF0099242C /* SymbolRollerView.swift in Sources */,
 				E55A601B28B325FF0099242C /* SwiftUI_SymbolRollerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
