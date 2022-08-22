@@ -8,34 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-      VStack(alignment: .leading, spacing: 30) {
-        VStack {
-          ImageView()
-          ButtonView()
-          TextView()
-          Spacer()
-        }
+  var body: some View {
+    VStack(alignment: .leading, spacing: 30) {
+      VStack {
+        ImageView()
+        ButtonView()
+        TextView()
+        Spacer()
+      }
+      
+      HStack {
+        ImageView()
+        ButtonView()
+        TextView()
         
-        HStack {
-          ImageView()
-          ButtonView()
-          TextView()
-          
-          Spacer()
-        }
-        
-        ZStack {
-          ImageView()
-          ButtonView()
-          TextView()
-        }
+        Spacer()
+      }
+      
+      ZStack {
+        ImageView()
+        ButtonView()
+        TextView()
       }
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }
