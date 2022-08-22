@@ -9,7 +9,8 @@ import SwiftUI
 
 struct TextView: View {
     var body: some View {
-        Text("ddd")
+        Text("SwiftUI")
+        .font(.system(size: 40, weight: .bold, design: .default))
     }
 }
 
