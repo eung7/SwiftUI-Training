@@ -45,4 +45,3 @@ struct FrameworkListView_Previews: PreviewProvider {
       .preferredColorScheme(.dark)
   }
 }
-
