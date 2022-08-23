@@ -8,31 +8,38 @@
 import SwiftUI
 
 struct FrameworkDetailView: View {
-  @Binding var framework: AppleFramework?
-//  @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-  @Binding var isShowingDetail: Bool
-
+  @StateObject var viewModel: FrameworkDetailViewModel
+  
   var body: some View {
-    VStack {
-      if let framework = framework {
-        Image(framework.imageName)
-        Text(framework.name)
-        Text(framework.description)
-      } else {
-        Text("Nothing selected!")
-      }
+    VStack(spacing: 30) {
+      Spacer()
+      Image(viewModel.framework.imageName)
+        .resizable()
+        .frame(width: 90, height: 90)
+      Text(viewModel.framework.name)
+        .font(.system(size: 24, weight: .bold, design: .default))
+      Text(viewModel.framework.description)
+        .font(.system(size: 16, weight: .regular, design: .default))
+      Spacer()
       
       Button {
-        isShowingDetail = false
+        print("Safari 띄우기")
       } label: {
-        Text("Button")
+        Text("Learn More")
+          .font(.system(size: 20, weight: .bold, design: .default))
+          .foregroundColor(.white)
       }
+      .frame(maxWidth: .infinity, minHeight: 80)
+      .background(.pink)
+      .cornerRadius(40)
     }
+    .padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
   }
 }
 
 struct FrameworkDetailView_Previews: PreviewProvider {
   static var previews: some View {
-    FrameworkDetailView(framework: .constant(AppleFramework.list[0]), isShowingDetail: .constant(true))
+    let viewModel = FrameworkDetailViewModel(framework: AppleFramework.list[0])
+    FrameworkDetailView(viewModel: viewModel)
   }
 }

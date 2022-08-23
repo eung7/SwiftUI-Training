@@ -32,8 +32,9 @@ struct FrameworkListView: View {
       }
       .navigationTitle("☀️ Apple Framework")
     }
-    .fullScreenCover(isPresented: $viewModel.isShowingDetail) {
-      FrameworkDetailView(framework: $viewModel.selectedItem, isShowingDetail: $viewModel.isShowingDetail)
+    .sheet(isPresented: $viewModel.isShowingDetail) {
+      let viewModel = FrameworkDetailViewModel(framework: viewModel.selectedItem!)
+      FrameworkDetailView(viewModel: viewModel)
     }
   }
 }
@@ -44,3 +45,4 @@ struct FrameworkListView_Previews: PreviewProvider {
       .preferredColorScheme(.dark)
   }
 }
+
