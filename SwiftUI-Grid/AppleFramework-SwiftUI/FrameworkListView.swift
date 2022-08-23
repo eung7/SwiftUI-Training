@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FrameworkListView: View {
-  @State var list: [AppleFramework] = AppleFramework.list
+  @StateObject var viewModel = FrameworkListViewModel()
   
   let layout: [GridItem] = [
     GridItem(.flexible()),
@@ -20,8 +20,8 @@ struct FrameworkListView: View {
     NavigationView {
       ScrollView {
         LazyVGrid(columns: layout) {
-          ForEach(list, id: \.self) { item in
-            FrameworkCell(framework: item)
+          ForEach($viewModel.models, id: \.self) { $item in
+            FrameworkCell(framework: $item)
           }
         }
         .padding([.top, .leading, .trailing], 16.0)
@@ -34,5 +34,6 @@ struct FrameworkListView: View {
 struct FrameworkListView_Previews: PreviewProvider {
   static var previews: some View {
     FrameworkListView()
+      .preferredColorScheme(.dark)
   }
 }
